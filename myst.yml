@@ -6,7 +6,7 @@ extends:
   - branding/c3s.yml
 
 project:
-  title: ECMWF Training Template
+  title: C3S Training Insitu Observations Submodule
   license: Apache-2.0
   open_access: true
   exclude:
