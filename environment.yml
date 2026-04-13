@@ -1,8 +1,7 @@
 dependencies:
-  - cdsapi
-  - numpy
-  - netCDF4
-  - xarray
-  - matplotlib
-  - cartopy
-  - jupyterlab-myst
+  - jupyter
+  - pip
+  - pip:
+    - earthkit-data==1.0.0rc1
+    - earthkit-plots==1.0.0rc1
+    - earthkit-transforms==1.0.0rc1
