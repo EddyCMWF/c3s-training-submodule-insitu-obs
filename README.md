@@ -57,7 +57,13 @@ new notebooks to the repository.
 
 ## Build the Jupyter Book locally
 
-Clone the repository and create a conda/mamba environment for building Jupyter Books:
+Clone the repository and change directory into said repo:
+```sh
+git clone git@github.com:ecmwf-training/c3s-training-submodule-insitu-obs.git
+cd c3s-training-submodule-insitu-obs
+```
+
+Create a conda/mamba environment for building Jupyter Books:
 ```sh
 conda create -y -n jupyter-build -c conda-forge python=3.12
 conda activate jupyter-build
