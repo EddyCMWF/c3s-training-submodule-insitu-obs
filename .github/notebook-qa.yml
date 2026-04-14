@@ -5,7 +5,7 @@
 
 # Notebooks to skip entirely (all checks), supports glob patterns
 skip_notebooks:
-  - "template-notebook.ipynb"
+  - "./template-notebook.ipynb"
 
 # Per-notebook check configuration
 # notebooks:
