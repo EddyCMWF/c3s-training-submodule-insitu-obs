@@ -23,7 +23,7 @@ QA_TOOLS_REPO := https://github.com/ecmwf-training/reusable-workflows
 TEMPLATE_REPO   := https://github.com/ecmwf-training/jupyterbook-submodule-template
 TEMPLATE_REMOTE := template
 TEMPLATE_BRANCH := develop
-TEMPLATE_PATHS  := .github Makefile setup.cfg
+TEMPLATE_PATHS  := .github Makefile setup.cfg README.md
 
 NOTEBOOKS  ?= $(shell find . -name "*.ipynb" \
                   -not -path "*/.ipynb_checkpoints/*" \
@@ -52,7 +52,7 @@ conda-env-update:
 
 .PHONY: uv-env-update
 uv-env-update:
-	uv pip install "jupyter-book>=2,<3" && uv pip install -r requirements.txt
+	uv pip install "jupyter-book>=2,<3" && uv pip install pip &&  uv pip install -r requirements.txt
 
 # ---------------------------------------------------------------------------
 # Template sync (for repositories created from this template)
@@ -96,7 +96,7 @@ qa-tools-update: ## Update the QA tools repository to the latest main
 
 .PHONY: qa-install
 qa-install: $(QA_TOOLS) ## Install QA dependencies into the active Python environment
-	cd $(QA_TOOLS) && pip install .
+	cd $(QA_TOOLS) && python -m pip install .
 
 # ---------------------------------------------------------------------------
 # Individual checks
@@ -177,7 +177,7 @@ qa-changelog: ## (4.2.3) Check that a non-empty CHANGELOG.md file exists
 # ---------------------------------------------------------------------------
 
 .PHONY: qa
-qa: $(QA_TOOLS) ## Run all static QA checks (continues on failure, reports a summary)
+qa: $(QA_TOOLS) qa-install ## Run all static QA checks (continues on failure, reports a summary)
 	@failed=""; \
 	for target in qa-lint qa-format qa-pynblint qa-figures qa-metadata qa-license qa-changelog; do \
 	  echo ""; \
