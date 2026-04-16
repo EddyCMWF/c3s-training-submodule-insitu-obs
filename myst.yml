@@ -26,7 +26,7 @@ project:
     - file: intro.md
     - title: README instructions
       file: README.md
-    - file: template-notebook.ipynb
+    - file: insitu-obs-storm-tracks.ipynb
 site:
   template: book-theme
   options:
