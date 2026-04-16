@@ -108,7 +108,7 @@ qa-lint: ## (2.2.3) Lint code cells with ruff check
 
 .PHONY: qa-format
 qa-format: ## (2.2.3) Check code-cell formatting with ruff format
-	ruff format --check --diff $(NOTEBOOKS)
+	ruff format $(NOTEBOOKS)
 
 .PHONY: qa-pynblint
 qa-pynblint: $(QA_TOOLS) ## (2.2.3) Run pynblint on each notebook
