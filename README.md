@@ -1,4 +1,4 @@
-# ECMWF JupyterBook sub-module - C3S tutorials on in situ observation data
+# ECMWF JupyterBook sub-module template
 
 This repository is a GitHub **template** for creating and maintaining a submodule that
 can be used in ECMWF Jupyter Books for learning and documentation resources.
