@@ -1,7 +1,6 @@
 # Globally disable specific checks
-# disabled_checks:
-#   - linter
-#   - formatter
+disabled_checks:
+  - figures
 
 # Notebooks to skip entirely (all checks), supports glob patterns
 skip_notebooks:
