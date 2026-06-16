@@ -96,7 +96,7 @@ qa-tools-update: ## Update the QA tools repository to the latest main
 
 .PHONY: qa-install
 qa-install: $(QA_TOOLS) ## Install QA dependencies into the active Python environment
-	cd $(QA_TOOLS) && python -m pip install .
+	cd $(QA_TOOLS) && python -m pip install . -q
 
 # ---------------------------------------------------------------------------
 # Individual checks
