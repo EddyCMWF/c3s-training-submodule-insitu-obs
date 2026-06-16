@@ -178,6 +178,5 @@ You can now fetch the latest version of the upstream repo, and merge into your b
 
 ```bash
 git fetch upstream
-git checkout main
-git merge upstream/main
+git merge upstream/develop
 ```
