@@ -1,3 +1,4 @@
 # List here the dependencies required for your notebook to run.
 cdsapi
-earthkit==1.0.0rc0
+earthkit>=1.0.0rc0
+matplotlib<=3.10.8
